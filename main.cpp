@@ -1,66 +1,38 @@
 /*** Eduardo Capanema ***/
+#include <iostream>
 #include "Engenheiro.hpp"
 #include "Vendedor.hpp"
 /*** 2020041515 ***/
 
 int main() {
 
-  Engenheiro eng1;
-  eng1.nome = "Joao Snow";
-  eng1.salarioHora = 35;
-  eng1.projetos = 3; 
-  std::cout << "Nome: " << eng1.nome << std::endl;
-  std::cout << "Salario Mes: " << eng1.pagamentoMes( 9.5 ) << std::endl;
-  std::cout << "Projetos: " << eng1.projetos << std::endl;
-  std::cout << std::endl;
+  /****** ENGENHEIROS ******/
+  int e = 3; // numero de engenheiros
+  std::string nomesEngenheiros[e] = {"Joao Snow", "Daniela Targaryen", "Bruno Stark"};
+  double salarioHoraEngenheiros[e] = {35, 30, 30};
+  double horasTrabalhadasEngenheiros[e] = {9.5, 8, 8};
+  int projetos[e] = {3, 1, 2};
+  for( int i=0; i<e; i++ ) {
+    Engenheiro *engenheiro = new Engenheiro( nomesEngenheiros[i], 
+                                             salarioHoraEngenheiros[i], 
+                                             horasTrabalhadasEngenheiros[i], 
+                                             projetos[i] );
+    std::cout << std::endl;
+  }
   
-  Engenheiro eng2;
-  eng2.nome = "Daniela Targaryen";
-  eng2.salarioHora = 30;
-  eng2.projetos = 1; 
-  std::cout << "Nome: " << eng2.nome << std::endl;
-  std::cout << "Salario Mes: " << eng2.pagamentoMes( 8 ) << std::endl;
-  std::cout << "Projetos: " << eng2.projetos << std::endl;  
-  std::cout << std::endl;
-  
-  Engenheiro eng3;
-  eng3.nome = "Bruno Stark";
-  eng3.salarioHora = 30;
-  eng3.projetos = 2; 
-  std::cout << "Nome: " << eng3.nome << std::endl;
-  std::cout << "Salario Mes: " << eng3.pagamentoMes( 8 ) << std::endl;
-  std::cout << "Projetos: " << eng3.projetos << std::endl;  
-  std::cout << std::endl;
-  
-  
-  Vendedor vend1;
-  vend1.nome = "Tonho Lannister";
-  vend1.salarioHora = 20;
-  vend1.quotaMensalVendas = 5000;
-  
-  std::cout << "Nome: " << vend1.nome << std::endl;
-  std::cout << "Salario Mes: " << vend1.pagamentoMes( 6 ) << std::endl;  
-  std::cout << "Quota vendas: " << vend1.quotaTotalAnual() << std::endl;
-  std::cout << std::endl;
-  
-  Vendedor vend2;
-  vend2.nome = "Jose Mormont";
-  vend2.salarioHora = 25;
-  vend2.quotaMensalVendas = 3000;
-  
-  std::cout << "Nome: " << vend2.nome << std::endl;
-  std::cout << "Salario Mes: " << vend2.pagamentoMes( 8 ) << std::endl;  
-  std::cout << "Quota vendas: " << vend2.quotaTotalAnual() << std::endl; 
-  std::cout << std::endl;  
-	
-  Vendedor vend3;
-  vend3.nome = "Sonia Stark";
-  vend3.salarioHora = 30;
-  vend3.quotaMensalVendas = 4000;
-  
-  std::cout << "Nome: " << vend3.nome << std::endl;
-  std::cout << "Salario Mes: " << vend3.pagamentoMes( 8 ) << std::endl;  
-  std::cout << "Quota vendas: " << vend3.quotaTotalAnual() << std::endl;  
+  /****** VENDEDORES ******/
+  int v = 3; // numero de vendedores
+  std::string nomesVendedores[v] = {"Tonho Lannister", "Jose Mormont", "Sonia Stark"};
+  double salarioHoraVendedores[v] = {20, 25, 30};
+  double horasTrabalhadasVendedores[v] = {6, 8, 8};
+  double quotaMensalVendas[v] = {5000, 3000, 4000};
+  for( int j=0; j<v; j++ ) {
+    Vendedor *vendedor = new Vendedor( nomesVendedores[j], 
+                                       salarioHoraVendedores[j], 
+                                       horasTrabalhadasVendedores[j], 
+                                       quotaMensalVendas[j] );
+    std::cout << std::endl;
+  }
   
   return 0;
 

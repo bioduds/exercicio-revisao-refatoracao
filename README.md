@@ -7,3 +7,30 @@ Você deve criar uma cópia local desse repositório, fazer as alterações que 
 No seu pull request faça uma lista/descrição detalhada das possíveis soluções que você utilizou.
   
 Dica: Utilize o catálogo com sugestões de refatoração (https://refactoring.com/catalog/).
+
+---
+# Documentação Pull Request
+
+**Aluno: Eduardo Capanema**
+
+**Matrícula: 2020041515**
+
+## **Alterações Realizadas:**
+
+* Criação de arquivos: Criamos cabeçalhos para todas os arquivos cpp relevantes
+
+* Reescrevemos Construtores tanto para classe base quanto para as sub-classes com suas devidas sobrecargas
+
+* Extração para a função print com criação de método base relatorio()
+
+* Introdução de encapsulamento private para variaveis de valores monetarios e atribuição de salário
+
+* Adição de parâmetros para construtores 
+
+* Mudança de assinaturas para métodos-chave
+
+* Remoção de parâmetros livres nas chamadas do main (e. g. horasTrabalhadas)
+
+* Sistematização independente para instanciação de subclasses (data-driven approach)
+
+* 

@@ -1,15 +1,27 @@
 #ifndef ENGENHEIRO_H
 #define ENGENHEIRO_H
 
-#include <iostream>
 #include <string>
 #include "Empregado.hpp"
 
 class Engenheiro : public Empregado {
 
-  public :
-    std::string nome;
+  public:
+
+    Engenheiro( std::string _nome, 
+                double _salarioHora, 
+                double _horasTrabalhadas, 
+                int _projetos ) : Empregado( _nome, 
+                                             _salarioHora, 
+                                             _horasTrabalhadas ), projetos( _projetos ) {
+
+        projetos = _projetos;
+        relatorioProjetos();
+        
+    }
+    
 	int projetos;
+    void relatorioProjetos();
 	
 };
 
