@@ -33,4 +33,3 @@ Dica: Utilize o catálogo com sugestões de refatoração (https://refactoring.c
 
 * Sistematização independente para instanciação de subclasses (data-driven approach)
 
-* 
